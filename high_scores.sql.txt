@@ -1,0 +1,11 @@
+Drop view high_scores;
+
+create view`high_scores` as 
+select studentid, sl.student_name, s1.testid, t.quizname, score as max_score, completion_time
+from student_test_score s1, student_login sl , test t
+where s1.studentid = sl.id
+and s1.testid = t.testId
+and score = ( select max(score) from student_test_score s2 where s2.testid = s1.testid ) ;
+
+
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.quizwhizzprototype">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/qw_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".review"></activity>
+        <activity android:name=".highscores" />
+        <activity android:name=".QuizList" />
+        <activity android:name=".quiz" />
+        <activity android:name=".studentDashboard" />
+        <activity android:name=".createQuiz" />
+        <activity android:name=".teacherDashboard" />
+        <activity android:name=".teacherLogin" />
+        <activity android:name=".createAccount" />
+        <activity android:name=".studentLogin" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
